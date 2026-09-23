@@ -3,3 +3,19 @@ body {
     color:rgb(58, 46, 135);
 }
 
+tr.food{
+    background-color: lightgreen;
+}
+
+tr.utilities{
+    background-color: lightblue;
+}
+
+tr.entertainment{
+    background-color: lightcoral;
+}
+
+tr.misc{
+    background-color: lightgoldenrodyellow;
+}
+
