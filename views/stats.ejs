@@ -1,0 +1,49 @@
+<%- include('partials/header.ejs')  %>
+
+    <h2>statisztikák</h2>
+
+    <p>Kiadások száma: <strong>
+            <%= count %>
+        </strong></p>
+    <p>Kiadások összege: <strong>
+            <%= total %>
+        </strong></p>
+    <p>Átlagos Kiadás: <strong>
+            <%= avg %>
+        </strong></p>
+
+    <h2>statisztikák kategóriánként</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Kategória</th>
+                <th>Darabszáám</th>
+                <th>Összeg</th>
+                <th>Átlag</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% categoryStats.forEach(stat=> { %>
+                <tr class="<%= stat.category %>">
+                    <td>
+                        <%= stat.category %>
+                    </td>
+                    <td>
+                        <%= stat.count %>
+                    </td>
+                    <td>
+                        <%= stat.total %>
+                    </td>
+                    <td>
+                        <%= stat.average %>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
